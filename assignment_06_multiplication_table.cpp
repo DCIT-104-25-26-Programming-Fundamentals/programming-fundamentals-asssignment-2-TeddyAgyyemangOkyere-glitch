@@ -57,3 +57,46 @@
 #include <iostream>
 using namespace std;
 
+
+// Function to print the multiplication table for a single number from 1 to 12 (PART A)
+void printTable(int num) {
+    cout << "Multiplication Table for " << num << ":\n";
+    for (int i = 1; i <= 12; i++) {
+        cout << num << " x " << i << " = " << (num * i) << "\n";
+    }
+}
+
+// Function for Part A
+void partA() {
+    int num;
+    cout << "--- PART A: Single Table ---\n";
+    cout << "Enter a number: ";
+    cin >> num;
+    cout << "\n";
+    printTable(num);
+}
+
+// Function for Part B
+void partB() {
+    int n;
+    cout << "--- PART B: Tables from 1 to N ---\n";
+    cout << "Enter a number N: ";
+    cin >> n;
+    cout << "\n";
+    
+    for (int i = 1; i <= n; i++) {
+        printTable(i);
+        if (i < n) {
+            cout << "------------------------------------\n";
+        }
+    }
+}
+
+int main() {
+    // You can test both Part A and Part B sequentially:
+    partA();
+    cout << "\n====================================\n\n";
+    partB();
+
+    return 0;
+}
